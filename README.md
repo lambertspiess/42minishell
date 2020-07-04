@@ -2,6 +2,10 @@
 # 42 minishell
 
 To build on OSX : make, make clean, make fclean, make re
+To build on Alpine Linux : make alpine, make alpclean, make , make alpre
 
-To build on Alpine Linux : make alpine, make alpclean, make alpfclean, make alpre
+Features :
+  Redirections :  >  ,  >>  ,  <
+  Pipelines : |
+
 ---------------------------------------------------------------------------------
