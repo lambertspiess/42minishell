@@ -6,7 +6,7 @@
 /*   By: lspiess <lspiess@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 19:09:31 by lspiess           #+#    #+#             */
-/*   Updated: 2020/07/01 16:55:51 by lspiess          ###   ########.fr       */
+/*   Updated: 2020/10/12 17:11:55 by lspiess          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ static void	catch_signal(int sigval)
 		getstat()->exitcode = 131;
 		if (getstat()->busy_executing)
 		{
-			ft_putstr("Quit: 3\n");
 			getstat()->busy_executing = 0;
 		}
 		else
