@@ -6,7 +6,7 @@
 /*   By: lspiess <lspiess@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 19:09:31 by lspiess           #+#    #+#             */
-/*   Updated: 2020/10/12 17:11:55 by lspiess          ###   ########.fr       */
+/*   Updated: 2020/11/02 16:15:00 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,9 @@ static void	catch_signal(int sigval)
 		handle_sigint();
 	else if (sigval == SIGQUIT)
 	{
-		getstat()->exitcode = 131;
+		getstat()->exitcode = 0;
 		if (getstat()->busy_executing)
-		{
-			getstat()->busy_executing = 0;
-		}
+			getstat()->exitcode = 131;
 		else
 			ft_putstr("\b\b  \b\b");
 	}

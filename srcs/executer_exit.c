@@ -6,7 +6,7 @@
 /*   By: lspiess <lspiess@student.42.us.org>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/17 18:15:44 by lspiess           #+#    #+#             */
-/*   Updated: 2020/06/25 01:30:51 by lspiess          ###   ########.fr       */
+/*   Updated: 2020/11/02 15:56:10 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int				execute_exit(t_ast_node *astroot, t_ast_node *node, \
 	{
 		ft_printf_fd(STDERR_FILENO,
 			"minishell: exit: too many arguments\n");
-		executer_exit_process(astroot, io, 2, 0);
+		return (1);
 	}
 	ret = ft_atoi(io->av[1]);
 	ft_printf_fd(STDOUT_FILENO, "exit\n");
